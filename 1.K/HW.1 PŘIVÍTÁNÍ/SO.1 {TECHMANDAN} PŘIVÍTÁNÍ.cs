@@ -1,38 +1,19 @@
-﻿using System;
+using System;
 
-namespace PVAukol
+namespace welcome
 {
     class Program
     {
         static void Main(string[] args)
         {
-
-            int cas = DateTime.Now.Hour;
-
             Console.Write("Vaše jméno: ");
-            string jmeno = Console.ReadLine();
-            string doba;
-            
-            if (cas < 12)
-            {
-                doba = "rána";
-            }
-
-            else if(cas >= 12 && cas < 18)
-            {
-                doba = "odpoledne";
-            }
-
-
-            else
-            {
-                doba = "večera";
-            }
-
-            Console.WriteLine($"Dobrého {doba}, ti přeji {jmeno}.");
-
-
-
+            var name = Console.ReadLine();
+            var hour = DateTime.Now.Hour;
+            string time;
+            if(hour < 12) time = "Dobré ráno";
+            else if(hour > 12 && hour < 18) time = "Dobré odpoledne";
+            else time = "Dobrý večer";
+            Console.WriteLine($"{time}, {name}");
         }
     }
 }
