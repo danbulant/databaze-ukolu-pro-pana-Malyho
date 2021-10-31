@@ -1,2 +1,2 @@
 # ukolypropanaMalyho
-úkoly pro pana Malýho
+databáze úkolů pro pana Malýho
